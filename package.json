@@ -1,0 +1,22 @@
+{
+  "name": "yalla",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -R spec"
+  },
+  "dependencies": {
+    "lodash.toarray": "^2.4.1"
+  },
+  "author": "Yaniv Kessler",
+  "bugs": {
+    "url": "https://github.com/kessler/yalla/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kessler/yalla"
+  },
+  "homepage": "https://github.com/kessler/yalla",
+  "license": "MIT"
+}
