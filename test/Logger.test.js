@@ -104,4 +104,8 @@ describe('Logger', function () {
 		
 		assert.strictEqual(errorOutput[0]['0'], 'DEBUG: 123')
 	})
+
+	it('logs the stack too', function() {
+		log.error(new Error())
+	})
 })
