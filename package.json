@@ -1,12 +1,15 @@
 {
   "name": "yalla",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A minimalistic logging lib",
   "main": "index.js",
   "scripts": {
     "test": "mocha -R spec"
   },
-  "keywords": [ "log", "logging" ],
+  "keywords": [
+    "log",
+    "logging"
+  ],
   "dependencies": {
     "lodash.toarray": "^2.4.1"
   },
