@@ -108,4 +108,13 @@ describe('Logger', function () {
 	it('logs the stack too', function() {
 		log.error(new Error())
 	})
+
+	it('translates string error levels to numeric ones', function () {
+		// make sure preconditions are ok 
+		assert.ok(log.level !== LogLevel.ERROR)
+
+		log.setLevel('ERROR')
+		
+		assert.strictEqual(log.level, LogLevel.ERROR)
+	})
 })

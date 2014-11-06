@@ -81,3 +81,5 @@ var consoleLogColoredOutput = {
 log.addOutput(consoleLogColoredOutput)
 ```
 
+### LogLevels
+SILLY, DEBUG, INFO, WARN, ERROR, SILENT
