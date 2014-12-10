@@ -14,14 +14,17 @@
     "lodash.toarray": "^2.4.1",
     "moment": "^2.8.4"
   },
+  "devDependencies": {
+    "mocha": "~1.17.1"
+  },
   "author": "Yaniv Kessler",
   "bugs": {
-    "url": "https://github.com/kessler/yalla/issues"
+    "url": "https://github.com/kessler/node-yalla/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kessler/yalla"
+    "url": "https://github.com/kessler/node-yalla"
   },
-  "homepage": "https://github.com/kessler/yalla",
+  "homepage": "https://github.com/kessler/node-yalla",
   "license": "MIT"
 }
