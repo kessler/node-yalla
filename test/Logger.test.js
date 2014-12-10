@@ -123,8 +123,8 @@ describe('Logger', function () {
 		var tslog = new Logger()
 
 		tslog.info('test')
-		var expected = moment().utc().format('YYYY')
-		
+		var expected = '[' + moment().utc().format('YYYY-MM-DD ')
+	
 		assert.ok(output[0]['0'].indexOf(expected) === 0)
 	})
 })
