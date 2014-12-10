@@ -1,4 +1,4 @@
-# Yet Another Logging Library (A)
+# Yet Another Logging Library (A) [![Build Status](https://secure.travis-ci.org/kessler/node-yalla.png?branch=master)](http://travis-ci.org/kessler/node-yalla) [![stable](http://badges.github.io/stability-badges/dist/stable.svg)](http://github.com/badges/stability-badges)
 
 A minimalistic logging lib
 
