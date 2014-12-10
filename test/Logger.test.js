@@ -1,6 +1,7 @@
 var assert = require('assert')
 var Logger = require('../lib/Logger.js')
 var LogLevel = require('../lib/LogLevel.js')
+var moment = require('moment')
 
 var util = require('util')
 
@@ -15,7 +16,7 @@ describe('Logger', function () {
 		var consolelog = console.log
 
 		// hook the real console log so we can sniff everything
-		// the comes through it
+		// that comes through it
 		console.log = function() {			
 			consolelog.apply(console, arguments)
 			output.push(arguments)
@@ -23,7 +24,7 @@ describe('Logger', function () {
 	})
 
 	beforeEach(function () {
-		log = new Logger(LogLevel.DEBUG)
+		log = new Logger(LogLevel.DEBUG, false)
 	
 		output = []
 	})
@@ -116,5 +117,14 @@ describe('Logger', function () {
 		log.setLevel('ERROR')
 		
 		assert.strictEqual(log.level, LogLevel.ERROR)
+	})
+
+	it('adds timestamp to output', function () {
+		var tslog = new Logger()
+
+		tslog.info('test')
+		var expected = moment().utc().format('YYYY')
+		
+		assert.ok(output[0]['0'].indexOf(expected) === 0)
 	})
 })

@@ -11,7 +11,8 @@
     "logging"
   ],
   "dependencies": {
-    "lodash.toarray": "^2.4.1"
+    "lodash.toarray": "^2.4.1",
+    "moment": "^2.8.4"
   },
   "author": "Yaniv Kessler",
   "bugs": {
