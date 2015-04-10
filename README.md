@@ -7,6 +7,8 @@ A minimalistic logging lib
 	var yalla = require('yalla')
 
 	var log = new yalla.Logger(yalla.LogLevel.SILLY))
+	//or
+	var log = new yalla.Logger('silly'))
 
 	if (log.isSilly())
 		log.silly('silly %s', util.inspect(something))
