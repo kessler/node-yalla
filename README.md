@@ -2,7 +2,7 @@
 
 A minimalistic logging lib
 
-(For a .NET version completely unrelated but with the same name please see [Yalla](http://yalladotnet.github.io/Yalla ) by [Dmitry Shechtman](https://github.com/dmitry-shechtman))
+(For the similarly named but completely unrelated .NET library please see [YALLA.NET](http://yalladotnet.github.io/Yalla ))
 
 ### simple usage
 ```javascript
