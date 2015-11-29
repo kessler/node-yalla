@@ -2,8 +2,10 @@
 
 A minimalistic logging lib
 
+(For a .NET version completely unrelated but with the same name please see [Yalla](http://yalladotnet.github.io/Yalla ) by [Dmitry Shechtman](https://github.com/dmitry-shechtman))
+
 ### simple usage
-```
+```javascript
 	var yalla = require('yalla')
 
 	var log = new yalla.Logger(yalla.LogLevel.SILLY))
@@ -23,7 +25,7 @@ A minimalistic logging lib
 ```
 
 ### custom output
-```
+```javascript
 	var yalla = require('yalla')
 	var util = require('util')
 
@@ -42,7 +44,7 @@ A minimalistic logging lib
 
 ### fancy custom output
 example for coloring for chrome console
-```
+```javascript
 var yalla = require('yalla')
 var LogLevel = yalla.LogLevel
 
