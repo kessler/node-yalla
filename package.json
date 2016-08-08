@@ -1,6 +1,6 @@
 {
   "name": "yalla",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A minimalistic logging lib",
   "main": "index.js",
   "scripts": {
