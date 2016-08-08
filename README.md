@@ -10,7 +10,7 @@ A minimalistic logging lib
 
 	var log = new yalla.Logger(yalla.LogLevel.SILLY))
 	//or
-	var log = new yalla.Logger('silly'))
+	//var log = new yalla.Logger('silly'))
 
 	if (log.isSilly())
 		log.silly('silly %s', util.inspect(something))
@@ -85,5 +85,21 @@ var consoleLogColoredOutput = {
 log.addOutput(consoleLogColoredOutput)
 ```
 
+### named logs
+```javascript
+	var yalla = require('yalla')
+
+	var log = new yalla.Logger({
+		addTimestamp: false, // optional
+		level: 'silly', // optional
+		name: 'foo'
+	}))
+
+	log.debug('debug') // prints [foo] debug
+```
+
+
 ### LogLevels
 SILLY, DEBUG, INFO, WARN, ERROR, SILENT
+
+In all places level constants are interchangable with their lower case string representation

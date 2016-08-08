@@ -10,25 +10,6 @@ describe('Logger', function () {
 	var output = []
 	var log
 
-	before(function () {
-
-		// save console.log for later use
-		var consolelog = console.log
-
-		// hook the real console log so we can sniff everything
-		// that comes through it
-		console.log = function() {			
-			consolelog.apply(console, arguments)
-			output.push(arguments)
-		}
-	})
-
-	beforeEach(function () {
-		log = new Logger(LogLevel.DEBUG, false)
-	
-		output = []
-	})
-
 	it('report debug, info and error by default', function () {
 		log.debug('test %s', 1)
 		log.info('test %s', 2)
@@ -126,5 +107,30 @@ describe('Logger', function () {
 		var expected = '[' + moment().utc().format('YYYY-MM-DD ')
 	
 		assert.ok(output[0]['0'].indexOf(expected) === 0)
+	})
+
+	it('can have a name, rendering it as part of every message', function () {
+		var namedLog = new Logger({ name: 'foo', addTimestamp: false })
+		namedLog.info('test')
+		assert.strictEqual(output[0]['0'], '[foo] INFO: test')
+	})
+
+	before(function () {
+
+		// save console.log for later use
+		var consolelog = console.log
+
+		// hook the real console log so we can sniff everything
+		// that comes through it
+		console.log = function() {			
+			consolelog.apply(console, arguments)
+			output.push(arguments)
+		}
+	})
+
+	beforeEach(function () {
+		log = new Logger(LogLevel.DEBUG, false)
+	
+		output = []
 	})
 })
