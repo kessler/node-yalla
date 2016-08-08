@@ -1,6 +1,6 @@
 var assert = require('assert')
-var Logger = require('../lib/Logger.js')
-var LogLevel = require('../lib/LogLevel.js')
+var Logger = require('./lib/Logger.js')
+var LogLevel = require('./lib/LogLevel.js')
 var moment = require('moment')
 
 var util = require('util')
